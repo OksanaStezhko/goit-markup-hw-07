@@ -787,11 +787,13 @@ img {
   border-radius: 50%;
   background-color: var(--bgd-primary);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill var(--time) var(--time-function);
+  transition: fill var(--time) var(--time-function),
+    transform var(--time) var(--time-function);
 }
 
 .modal-button-close:hover {
   fill: var(--text-accent);
+  transform: scale(1.4) rotate(180deg);
 }
 
 .modal-icon-close {
