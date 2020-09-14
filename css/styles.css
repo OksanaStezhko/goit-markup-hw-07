@@ -903,6 +903,10 @@ img {
   background-color: var(--bgd-button-hover);
 }
 
+.form-submit:disabled {
+  background-color: var(--bgd-icon);
+}
+
 .form-modal-icon {
   display: block;
   position: absolute;
