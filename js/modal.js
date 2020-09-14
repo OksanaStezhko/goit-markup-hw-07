@@ -11,4 +11,17 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
+
+  const inputs = document.querySelectorAll('input[type=checkbox]');
+  const button = document.querySelector('.form-submit');
+  function check() {
+    button.disabled = true;
+    inputs.forEach(input => {
+      if (input.checked) button.disabled = false;
+      else {
+        button.disabled = true;
+      }
+    });
+  }
+  inputs.forEach(input => input.addEventListener('change', check));
 })();

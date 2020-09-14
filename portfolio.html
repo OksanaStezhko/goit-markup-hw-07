@@ -43,7 +43,11 @@
         <ul class="list studio-list-contacts flexbox">
           <li class="item">
             <a href="mailto:info@devstudio.com" class="link flexbox">
-              <svg class="contact-mail-icon">
+              <svg
+                class="contact-icon contact-mail-icon"
+                width="16"
+                height="12"
+              >
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -51,7 +55,11 @@
           </li>
           <li class="item">
             <a href="tel:+380961111111" class="link flexbox">
-              <svg class="contact-tell-icon">
+              <svg
+                class="contact-icon contact-tell-icon"
+                width="10"
+                height="16"
+              >
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -323,6 +331,21 @@
             </li>
           </ul>
         </div>
+        <form class="form-footer">
+          <p class="nomargin text">Подпишитесь на рассылку</p>
+          <div class="form-footer-box flexbox">
+            <label class="form-footer-mail">
+              <input
+                type="email"
+                class="form-footer-input"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="form-footer-button flexbox">
+              Подписаться
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
