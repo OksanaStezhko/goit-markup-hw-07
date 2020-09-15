@@ -1,46 +1,4 @@
-/* Делаю пока все во одном файле, позже по необходимости могу разделить на общий и постраничные файлы css */
-
-/* текст цвет основной #757575 */
-/* текст цвет заголовков #212121 */
-/* текст цвет акцент #2196F3 */
-/* текст цвет белый #FFFFFF*/
-/* фон основной белый #FFFFFF */
-/* фон серый  #F5F4FA */
-/* фон акцент #2196F3 */
-/* фон секции шапка, подвал #2F303A */
-/* цвета логотипа #000000  #2196F3 #FFFFFF */
-
-/* Шрифты: все normal
-/* Roboto 400, 500, 700, 900  */
-/* Raleway 700 */
-/* letter-spacing: 0.03em общий текст*/
-/* letter-spacing: 0.02em навигация  */
-/* letter-spacing: 0.06em секция шапки */
-:root {
-  --text-main: #757575;
-  --text-header: #212121;
-  --text-accent: #2196f3;
-  --text-white: #ffffff;
-  --text-address: rgba(255, 255, 255, 0.6);
-
-  --bgd-primary: #ffffff;
-  --bgd-second: #f5f4fa;
-  --bgd-accent: #2196f3;
-  --bgd-button-hover: #188ce8;
-  --bgd-border: #eeeeee;
-  --bgd-line: #ececec;
-  --bgd-header-footer: #2f303a;
-  --bgd-icon: #afb1b8;
-  --bgd-footer-icon: rgba(255, 255, 255, 0.1);
-
-  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --time: 250ms;
-}
-/* Пока отдельно указала белый цвет  для фона и для текста */
-/* Разные переменные, если нужно будет поменять переменную цвета текста, не затронет цвет фона и наоборот */
-
-/* Общие параметры на страницах index.html, protfolio.html */
-
+@charset "UTF-8";
 /* Общее - контентные изображения */
 img {
   display: block;
@@ -81,18 +39,20 @@ img {
 
 /* Общее - заголовки*/
 .title {
-  color: var(--text-header);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  color: #212121;
+  letter-spacing: 0.03em;
+  font: normal 700 36px/1.16 Roboto, sans-serif;
 }
 
 .flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .wrap {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* Общее - секции*/
@@ -115,13 +75,13 @@ img {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-size: 14px;
-  color: var(--text-main);
+  color: #757575;
   letter-spacing: 0.03em;
 }
 
 /* Общее шапка и подвал */
 .footer {
-  background-color: var(--bgd-header-footer);
+  background-color: #2f303a;
 }
 
 /* Общее - паддинги секций */
@@ -139,7 +99,7 @@ img {
 }
 
 .portfolio {
-  border-top: 1px solid var(--bgd-line);
+  border-top: 1px solid #ececec;
 }
 
 .background {
@@ -147,21 +107,23 @@ img {
   margin: 0px auto;
   padding: 200px 0px;
   height: 600px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/primary.jpg');
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/primary.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/primary.jpg");
 }
 
 .topline {
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .studio-nav {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Логотип в хедере */
@@ -181,6 +143,7 @@ img {
 .studio-list-page > .item:not(:last-child) {
   margin-right: 50px;
 }
+
 .studio-list-contacts > .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -188,34 +151,39 @@ img {
 /* Логотип в хедере*/
 .logo {
   font-family: Raleway, sans-serif;
-  color: var(--text-header);
+  color: #212121;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
+
 /* Цвет первой части логотипа */
 .logo-part-one {
-  color: var(--text-accent);
+  color: #2196f3;
 }
+
 /* Цвет второй части логотипа для футтера */
 .logo-part-two {
-  color: var(--text-white);
+  color: #ffffff;
 }
 
 /* Параметры ссылок навигации по сайту */
 .studio-list-page .link {
-  color: var(--text-header);
-  transition: background-color var(--time) var(--time-function),
-    color var(--time) var(--time-function);
+  color: #212121;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Параметры ссылок для обратной связи */
 .studio-list-contacts .link {
-  color: var(--text-main);
-  align-items: center;
-  transition: background-color var(--time) var(--time-function),
-    color var(--time) var(--time-function);
+  color: #757575;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Паддинги на ссылках для расширения области реагирования на ховер */
 .studio-list-page .link,
 .studio-list-contacts .link {
@@ -228,18 +196,20 @@ img {
 .studio-list-page .link:focus,
 .studio-list-contacts .link:hover,
 .studio-list-contacts .link:focus {
-  color: var(--text-accent);
+  color: #2196f3;
 }
 
 /* Иконки в хедере */
 .contact-icon {
   margin-right: 10px;
-  fill: var(--text-main);
-  transition: fill var(--time) var(--time-function);
+  fill: #757575;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .studio-list-contacts .link:hover .contact-icon,
 .studio-list-contacts .link:focus .contact-icon {
-  fill: var(--text-accent);
+  fill: #2196f3;
 }
 
 /* ховер для активной ссылки */
@@ -247,17 +217,16 @@ img {
   position: relative;
   left: 0;
   top: 31px;
-
   content: '';
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--bgd-accent);
+  background-color: #2196f3;
 }
 
 .primary {
-  border-top: 1px solid var(--bgd-line);
+  border-top: 1px solid #ececec;
 }
 
 /* Контейнер для заголовка и кноки секции Шапка */
@@ -269,13 +238,9 @@ img {
 /* Параметры заголовка h1 на странице Studio */
 .primary .title {
   margin-bottom: 30px;
-
-  color: var(--text-white);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  color: #ffffff;
+  font: normal 900 44px/1.36 Roboto, sans-serif;
   letter-spacing: 0.06em;
-
   text-transform: uppercase;
 }
 
@@ -283,29 +248,32 @@ img {
 .primary .button {
   padding: 10px;
   min-width: 200px;
-  color: var(--text-white);
+  color: #ffffff;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-
   border: none;
   border-radius: 4px;
-  background-color: var(--bgd-accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-
-  transition: background-color var(--time) var(--time-function);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .primary .button:hover,
 .primary .button:focus {
-  background-color: var(--bgd-button-hover);
+  background-color: #188ce8;
 }
 
 /* Секция Особенности */
 .features-list {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* Карточка Особенности */
@@ -315,23 +283,25 @@ img {
   text-align: start;
   line-height: 1.71;
 }
+
 .features-card > .title {
   margin-bottom: 10px;
-
-  color: var(--text-header);
+  color: #212121;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
+
 .features-image {
-  background-color: var(--bgd-second);
+  background-color: #f5f4fa;
   margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
   text-align: center;
   border-radius: 4px;
 }
+
 .features-icon {
   width: 70px;
   height: 70px;
@@ -345,8 +315,12 @@ img {
 /* Карточка - наша деятельность */
 .activity-card {
   position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: calc((100% - 30px * 2) / 3);
 }
 
@@ -358,37 +332,42 @@ img {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   padding: 27px 0px;
   width: 370px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--text-white);
+  color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Секция Наша команда */
 .team {
-  background-color: var(--bgd-second);
+  background-color: #f5f4fa;
 }
+
 .team > .container > .title {
   margin-bottom: 50px;
 }
 
 /* Карточка Наша команда */
 .team-card {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: calc((100% - 30px * 3) / 4);
-
-  background-color: var(--bgd-primary);
+  background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .team-card:not(:nth-child(4n)) {
@@ -396,7 +375,9 @@ img {
 }
 
 .team-card-image {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*Раздел с текстом под фото в карточке Наша команда  */
@@ -404,10 +385,10 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .team-card-title > .title {
   margin-bottom: 10px;
-
-  color: var(--text-header);
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -415,7 +396,7 @@ img {
 
 /*Текст-доложность в карточке Наша команда */
 .team-card-title > .text {
-  color: var(--text-main);
+  color: #757575;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
@@ -426,28 +407,35 @@ img {
 .social-item:not(:nth-child(4)) {
   margin-right: 10px;
 }
+
 .social-icon {
   width: 20px;
   height: 20px;
 }
+
 .social-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .team .social-link {
-  background-color: var(--bgd-footer-icon);
-  fill: var(--bgd-icon);
-  transition: background-color var(--time) var(--time-function),
-    fill var(--time) var(--time-function);
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #afb1b8;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .team .social-link:hover,
 .team .social-link:focus {
-  background-color: var(--bgd-accent);
-  fill: var(--text-white);
+  background-color: #2196f3;
+  fill: #ffffff;
 }
 
 /* Секция Постоянные клиенты */
@@ -455,26 +443,32 @@ img {
 .clients-list > .item {
   width: calc((100% - 30px * 5) / 6);
 }
+
 .clients-list .item:not(:nth-child(6n)) {
   margin-right: 30px;
 }
+
 .client-link {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 90px;
   width: 170px;
-  border: 1px solid var(--bgd-icon);
+  border: 1px solid #afb1b8;
   border-radius: 4px;
-  fill: var(--bgd-icon);
-  transition: border-color var(--time) var(--time-function),
-    fill var(--time) var(--time-function);
+  fill: #afb1b8;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Ховер на логотипы-ссылки на сайты клиентов */
 .client-link:hover,
 .client-link:focus {
-  fill: var(--bgd-accent);
-  border: 1px solid var(--bgd-accent);
+  fill: #2196f3;
+  border: 1px solid #2196f3;
 }
 
 .clients .title {
@@ -486,9 +480,13 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
 .footer > .flexbox {
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
+
 .footer-contacts {
   margin-right: 70px;
   min-width: 231px;
@@ -499,21 +497,21 @@ img {
 .address-mail {
   margin-top: 0px;
   margin-bottom: 9px;
-
-  color: var(--text-white);
+  color: #ffffff;
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
 }
+
 .address-email,
 .address-tel {
   display: block;
-
-  color: var(--text-address);
+  color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
 }
+
 .address-email {
   margin-bottom: 9px;
 }
@@ -529,7 +527,7 @@ img {
 .form-footer > .text {
   margin-bottom: 20px;
   text-align: start;
-  color: var(--text-white);
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.14;
@@ -537,42 +535,58 @@ img {
 
 /* Ссыли на соц.сети в футере */
 .footer .social-link {
-  background-color: var(--bgd-footer-icon);
-  fill: var(--text-white);
-  transition: background-color var(--time) var(--time-function);
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer .social-link:hover,
 .footer .social-link:focus {
-  background-color: var(--bgd-accent);
+  background-color: #2196f3;
 }
 
 .form-footer {
   width: 570px;
-
   margin-left: auto;
   text-align: start;
 }
+
 .form-footer-box {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .form-footer-input {
   padding: 15px 16px;
   margin-right: 12px;
   width: 358px;
-
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-
   background-color: transparent;
-  box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
+
+.form-footer-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-footer-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-footer-input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .form-footer-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
@@ -581,14 +595,12 @@ img {
   position: relative;
   padding: 10px 28px;
   width: 200px;
-
-  color: var(--text-white);
+  color: #ffffff;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-
-  background-color: var(--bgd-accent);
+  background-color: #2196f3;
   border: none;
   border-radius: 4px;
 }
@@ -597,26 +609,29 @@ img {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(-28px, -50%);
-
+  -webkit-transform: translate(-28px, -50%);
+          transform: translate(-28px, -50%);
   content: '';
   display: block;
   width: 24px;
   height: 24px;
-
   background-image: url(../images/icon-send.svg);
   background-size: contain;
 }
 
 /* Марджины и паддинги для списка фильтров в верхней части секции Портфолио*/
 .portfolio-filter {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-bottom: 34px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 16px;
   cursor: pointer;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .portfolio-item:not(:last-child) {
@@ -626,29 +641,27 @@ img {
 /* Кнопки-фильтры в портфолио  */
 .portfolio-filter .button {
   padding: 6px 22px;
-
-  color: var(--text-header);
+  color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
-
-  background-color: var(--bgd-second);
+  background-color: #f5f4fa;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
-  transition: background-color var(--time) var(--time-function),
-    color var(--time) var(--time-function);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Ховер и фокус для кнопок фильтров портфолио */
 .portfolio-filter .button:hover,
 .portfolio-filter .button:focus {
-  color: var(--text-white);
-  background-color: var(--bgd-accent);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Правый марджин для сетки многострочного контейнера, исключаем каждый третий */
@@ -669,12 +682,14 @@ img {
 /* Тень при ховере на карточках-ссылках портфолио */
 .portfolio-link {
   display: block;
-  border: 1px solid var(--bgd-border);
+  border: 1px solid #eeeeee;
 }
 
 .portfolio-card-image {
   position: relative;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 
@@ -686,36 +701,38 @@ img {
   padding: 63px 24px;
   width: 100%;
   height: 100%;
-
   font-weight: normal;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   text-align: left;
-  color: var(--text-white);
+  color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
-  transition: transform var(--time) var(--time-function);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  border: 1px solid var(--bgd-border);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  border: 1px solid #eeeeee;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-link:hover .portfolio-card-overley,
 .portfolio-link:focus .portfolio-card-overley {
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 /* Заголовки под карточками в портфолио */
 .portfolio-card-title > .title {
   margin-bottom: 4px;
-
-  color: var(--text-header);
+  color: #212121;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -730,7 +747,7 @@ img {
 
 /* Текст под карточками портфолио */
 .portfolio-card-title > .text {
-  color: var(--text-main);
+  color: #757575;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
@@ -744,7 +761,8 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity var(--time) var(--time-function);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -753,24 +771,27 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
 }
 
 .backdrop .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-
   padding: 40px;
   width: 528px;
   height: 581px;
-  background-color: var(--bgd-primary);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--time) var(--time-function) var(--time);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .modal-button-close {
@@ -779,26 +800,36 @@ img {
   right: 8px;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  align-items: center;
-
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--bgd-primary);
+  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill var(--time) var(--time-function),
-    transform var(--time) var(--time-function);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button-close:hover {
-  fill: var(--text-accent);
-  transform: scale(1.4) rotate(180deg);
+  fill: #2196f3;
+  -webkit-transform: scale(1.4) rotate(180deg);
+          transform: scale(1.4) rotate(180deg);
 }
 
 .modal-icon-close {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-modal {
@@ -816,9 +847,13 @@ img {
 .form-inputs-item {
   margin-bottom: 10px;
 }
+
 .form-modal-field {
   position: relative;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form-inputs-list {
@@ -827,7 +862,8 @@ img {
 }
 
 .form-modal-icon {
-  transition: fill var(--time) var(--time-function);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input {
@@ -835,43 +871,56 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  transition: border-color var(--time) var(--time-function);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus-within {
-  border-color: var(--text-accent);
+  border-color: #2196f3;
 }
 
 .form-modal-field:focus-within .form-modal-icon {
-  fill: var(--text-accent);
+  fill: #2196f3;
 }
 
 .form-modal-label {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
-
   letter-spacing: 0.01em;
 }
+
 .form-comment {
   resize: none;
   padding: 12px 16px;
-
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-  transition: border-color var(--time) var(--time-function);
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-comment::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-comment:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-comment::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .form-comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form-comment:focus-within {
-  border-color: var(--text-accent);
+  border-color: #2196f3;
 }
 
 .modal-checkbox-label {
@@ -880,33 +929,33 @@ img {
   line-height: 1.71;
   margin-right: 5px;
 }
+
 .form-link {
-  color: var(--text-accent);
+  color: #2196f3;
 }
+
 .form-submit {
   padding: 10px 55px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
-  color: var(--text-white);
-
-  background-color: var(--bgd-accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-
-  transition: backrgound-color var(--time) var(--time-function);
+  -webkit-transition: backrgound-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: backrgound-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-submit:hover {
-  background-color: var(--bgd-button-hover);
+  background-color: #188ce8;
 }
 
 .form-submit:disabled {
-  background-color: var(--bgd-icon);
+  background-color: #afb1b8;
 }
 
 .form-modal-icon {
@@ -914,13 +963,16 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(-11px);
+  -webkit-transform: translateY(-11px);
+          transform: translateY(-11px);
   margin-left: 12px;
 }
 
 .form-modal-checkbox {
   margin-bottom: 30px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal-checkbox-castom {
@@ -929,27 +981,15 @@ img {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
-  border: 1px solid var(--text-header);
-  background-color: var(--bgd-primary);
-
-  transition: background-color var(--time) var(--time-function);
+  border: 1px solid #212121;
+  background-color: #ffffff;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .modal-checkbox-castom {
-  background-color: var(--bgd-accent);
+  background-color: #2196f3;
   border-color: transparent;
   border-radius: 2px;
 }
-
-/* ...........Для тестирования.................. */
-
-/* .container,
-.features-card,
-.team-card,
-.activity-card,
-.portfolio-card,
-.social-item,
-.footer-social,
-.features-image {
-  outline: 2px solid green !important;
-} */
+/*# sourceMappingURL=main.css.map */
