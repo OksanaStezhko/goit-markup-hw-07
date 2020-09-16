@@ -39,9 +39,9 @@ img {
 
 /* Общее - заголовки*/
 .title {
+  font: normal 700 36px/1.16 Roboto, sans-serif;
   color: #212121;
   letter-spacing: 0.03em;
-  font: normal 700 36px/1.16 Roboto, sans-serif;
 }
 
 .flexbox {
@@ -238,8 +238,8 @@ img {
 /* Параметры заголовка h1 на странице Studio */
 .primary .title {
   margin-bottom: 30px;
-  color: #ffffff;
   font: normal 900 44px/1.36 Roboto, sans-serif;
+  color: #ffffff;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
