@@ -14,7 +14,7 @@
     <!-- Нормализатор из конспекта -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
     <!-- Мой файл стилей -->
@@ -458,14 +458,14 @@
             </li>
           </ul>
         </div>
-        <form
-          method="POST"
-          autocomplete="off"
-          id="form-footer"
-          class="form-footer"
-        >
+        <div class="form-footer-box">
           <p class="nomargin text">Подпишитесь на рассылку</p>
-          <div class="form-footer-box flexbox">
+          <form
+            method="POST"
+            autocomplete="off"
+            id="form-footer"
+            class="form-footer flexbox"
+          >
             <input
               type="email"
               class="form-footer-input"
@@ -475,8 +475,8 @@
             <button type="submit" class="form-footer-button flexbox">
               Подписаться
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>

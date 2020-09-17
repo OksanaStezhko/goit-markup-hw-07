@@ -1,12 +1,10 @@
 @charset "UTF-8";
-/* Общее - контентные изображения */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Общее - списки*/
 .list {
   list-style: none;
   padding: 0px;
@@ -69,7 +67,6 @@ img {
   padding-right: 15px;
 }
 
-/* Общие параметры для страниц index и portfolio */
 .studio-page,
 .portfolio-page {
   font-family: Roboto, sans-serif;
@@ -79,11 +76,6 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* Общее шапка и подвал */
-.footer {
-  background-color: #2f303a;
-}
-
 /* Общее - паддинги секций */
 .features,
 .team,
@@ -91,61 +83,6 @@ img {
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-/* Паддинг секции "Чем мы занимаемся" */
-.activity {
-  padding-bottom: 94px;
-}
-
-.portfolio {
-  border-top: 1px solid #ececec;
-}
-
-.background {
-  max-width: 1600px;
-  margin: 0px auto;
-  padding: 200px 0px;
-  height: 600px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/primary.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/primary.jpg");
-}
-
-.topline {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.studio-nav {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* Логотип в хедере */
-.studio-nav .logo {
-  margin-right: 93px;
-  padding: 24px 0px 25px;
-}
-
-/* Общие параметры для двух списков верхней линии */
-.studio-list-page,
-.studio-list-contacts {
-  letter-spacing: 0.02em;
-  font-weight: 500;
-}
-
-/* Правые марджины внутри списков из nav и списка контактов */
-.studio-list-page > .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.studio-list-contacts > .item:not(:last-child) {
-  margin-right: 30px;
 }
 
 /* Логотип в хедере*/
@@ -167,6 +104,44 @@ img {
   color: #ffffff;
 }
 
+/* Логотип в хедере */
+.studio-nav .logo {
+  margin-right: 93px;
+  padding: 24px 0px 25px;
+}
+
+/* Логотип в футтере */
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.topline {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.studio-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Общие параметры для двух списков верхней линии */
+.studio-list-page {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+/* Правые марджины внутри списков из nav и списка контактов */
+.studio-list-page > .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 /* Параметры ссылок навигации по сайту */
 .studio-list-page .link {
   color: #212121;
@@ -174,42 +149,9 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Параметры ссылок для обратной связи */
-.studio-list-contacts .link {
-  color: #757575;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /* Паддинги на ссылках для расширения области реагирования на ховер */
-.studio-list-page .link,
-.studio-list-contacts .link {
+.studio-list-page .link {
   padding: 32px 0px;
-}
-
-/*  hover и focus для ссылок навигации по сайту*/
-.link.current,
-.studio-list-page .link:hover,
-.studio-list-page .link:focus,
-.studio-list-contacts .link:hover,
-.studio-list-contacts .link:focus {
-  color: #2196f3;
-}
-
-/* Иконки в хедере */
-.contact-icon {
-  margin-right: 10px;
-  fill: #757575;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.studio-list-contacts .link:hover .contact-icon,
-.studio-list-contacts .link:focus .contact-icon {
-  fill: #2196f3;
 }
 
 /* ховер для активной ссылки */
@@ -225,8 +167,68 @@ img {
   background-color: #2196f3;
 }
 
+/*  hover и focus для ссылок навигации по сайту*/
+.link.current,
+.studio-list-page .link:hover,
+.studio-list-page .link:focus {
+  color: #2196f3;
+}
+
+/* Общие параметры для двух списков верхней линии */
+.studio-list-contacts {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.studio-list-contacts > .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Параметры ссылок для обратной связи */
+.studio-list-contacts .link {
+  color: #757575;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Паддинги на ссылках для расширения области реагирования на ховер */
+.studio-list-contacts .link {
+  padding: 32px 0px;
+}
+
+/* Иконки в хедере */
+.contact-icon {
+  margin-right: 10px;
+  fill: #757575;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.studio-list-contacts .link:hover .contact-icon,
+.studio-list-contacts .link:focus .contact-icon {
+  fill: #2196f3;
+}
+
+/*  hover и focus для ссылок навигации по сайту*/
+.studio-list-contacts .link:hover,
+.studio-list-contacts .link:focus {
+  color: #2196f3;
+}
+
 .primary {
   border-top: 1px solid #ececec;
+}
+
+.background {
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 200px 0px;
+  height: 600px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/primary.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/primary.jpg");
 }
 
 /* Контейнер для заголовка и кноки секции Шапка */
@@ -307,7 +309,11 @@ img {
   height: 70px;
 }
 
-/* Секция Чем мы занимаемся */
+/* Паддинг секции "Чем мы занимаемся" */
+.activity {
+  padding-bottom: 94px;
+}
+
 .activity .title {
   margin-bottom: 50px;
 }
@@ -438,8 +444,6 @@ img {
   fill: #ffffff;
 }
 
-/* Секция Постоянные клиенты */
-/* Список логотипов-ссылок на сайты клиентов */
 .clients-list > .item {
   width: calc((100% - 30px * 5) / 6);
 }
@@ -475,7 +479,10 @@ img {
   margin-bottom: 50px;
 }
 
-/* Футер */
+.footer {
+  background-color: #2f303a;
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -493,38 +500,9 @@ img {
   text-align: start;
 }
 
-/* Адрес: ссылки и текст  */
-.address-mail {
-  margin-top: 0px;
-  margin-bottom: 9px;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-}
-
-.address-email,
-.address-tel {
-  display: block;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-}
-
-.address-email {
-  margin-bottom: 9px;
-}
-
-/* Логотип в футтере */
-.footer .logo {
-  display: block;
-  margin-bottom: 20px;
-}
-
 /* Текст над ссылками на соц.сети в футере */
 .footer-social > .text,
-.form-footer > .text {
+.form-footer-box > .text {
   margin-bottom: 20px;
   text-align: start;
   color: #ffffff;
@@ -546,16 +524,16 @@ img {
   background-color: #2196f3;
 }
 
-.form-footer {
-  width: 570px;
-  margin-left: auto;
-  text-align: start;
-}
-
 .form-footer-box {
+  margin-left: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.form-footer {
+  width: 570px;
+  text-align: start;
 }
 
 .form-footer-input {
@@ -619,7 +597,33 @@ img {
   background-size: contain;
 }
 
-/* Марджины и паддинги для списка фильтров в верхней части секции Портфолио*/
+/* Адрес: ссылки и текст  */
+.address-mail {
+  margin-top: 0px;
+  margin-bottom: 9px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.address-email,
+.address-tel {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.address-email {
+  margin-bottom: 9px;
+}
+
+.portfolio {
+  border-top: 1px solid #ececec;
+}
+
 .portfolio-filter {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

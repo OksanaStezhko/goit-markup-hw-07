@@ -1,0 +1,82 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Общее - ссылки */
+.link {
+  text-decoration: none;
+  margin: 0px;
+}
+
+/* Общее - скрыть объект */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Общее - без марджинов */
+.nomargin,
+.title {
+  margin: 0px;
+}
+
+/* Общее - заголовки*/
+.title {
+  font: $font-title;
+  color: $text-header;
+  letter-spacing: $ls-main;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* Общее - секции*/
+.section {
+  text-align: center;
+}
+
+/* Общее - основной контейнер */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.studio-page,
+.portfolio-page {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  color: $text-main;
+  letter-spacing: 0.03em;
+}
+
+/* Общее - паддинги секций */
+.features,
+.team,
+.clients,
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

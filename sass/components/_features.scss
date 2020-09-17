@@ -1,0 +1,33 @@
+/* Секция Особенности */
+.features-list {
+  justify-content: space-between;
+}
+
+/* Карточка Особенности */
+.features-card {
+  /* width: 270px; */
+  width: calc((100% - 30px * 3) / 4);
+  text-align: start;
+  line-height: 1.71;
+}
+.features-card > .title {
+  margin-bottom: 10px;
+
+  color: $text-header;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.features-image {
+  background-color: $bgd-second;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  border-radius: 4px;
+}
+.features-icon {
+  width: 70px;
+  height: 70px;
+}

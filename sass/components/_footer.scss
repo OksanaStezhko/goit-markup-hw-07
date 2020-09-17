@@ -1,0 +1,43 @@
+.footer {
+  background-color: $color-section;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer > .flexbox {
+  align-items: baseline;
+}
+.footer-contacts {
+  margin-right: 70px;
+  min-width: 231px;
+  text-align: start;
+}
+
+/* Текст над ссылками на соц.сети в футере */
+.footer-social > .text,
+.form-footer-box > .text {
+  margin-bottom: 20px;
+  text-align: start;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+/* Ссыли на соц.сети в футере */
+.footer .social-link {
+  background-color: $bgd-icon-footer;
+  fill: $color-white;
+  transition: background-color $time $time-function;
+}
+.footer .social-link:hover,
+.footer .social-link:focus {
+  background-color: $color-accent;
+}
+
+.form-footer-box {
+  margin-left: auto;
+  justify-content: space-between;
+}

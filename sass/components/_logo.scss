@@ -1,0 +1,26 @@
+/* Логотип в хедере*/
+.logo {
+  font-family: Raleway, sans-serif;
+  color: $text-header;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+/* Цвет первой части логотипа */
+.logo-part-one {
+  color: $color-accent;
+}
+/* Цвет второй части логотипа для футтера */
+.logo-part-two {
+  color: $color-white;
+}
+/* Логотип в хедере */
+.studio-nav .logo {
+  margin-right: 93px;
+  padding: 24px 0px 25px;
+}
+/* Логотип в футтере */
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,39 @@
+/* Общие параметры для двух списков верхней линии */
+.studio-list-page {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+/* Правые марджины внутри списков из nav и списка контактов */
+.studio-list-page > .item:not(:last-child) {
+  margin-right: 50px;
+}
+/* Параметры ссылок навигации по сайту */
+.studio-list-page .link {
+  color: $text-header;
+  transition: background-color $time $time-function, color $time $time-function;
+}
+/* Паддинги на ссылках для расширения области реагирования на ховер */
+.studio-list-page .link {
+  padding: 32px 0px;
+}
+
+/* ховер для активной ссылки */
+.link.current::after {
+  position: relative;
+  left: 0;
+  top: 31px;
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $color-accent;
+}
+
+/*  hover и focus для ссылок навигации по сайту*/
+.link.current,
+.studio-list-page .link:hover,
+.studio-list-page .link:focus {
+  color: $color-accent;
+}

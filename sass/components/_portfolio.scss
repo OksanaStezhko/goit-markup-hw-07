@@ -1,0 +1,129 @@
+.portfolio {
+  border-top: 1px solid $color-line;
+}
+
+.portfolio-filter {
+  display: inline-flex;
+  margin-bottom: 34px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 16px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.portfolio-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Кнопки-фильтры в портфолио  */
+.portfolio-filter .button {
+  padding: 6px 22px;
+
+  color: $text-header;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  background-color: $bgd-second;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: background-color $time $time-function, color $time $time-function;
+}
+/* Ховер и фокус для кнопок фильтров портфолио */
+.portfolio-filter .button:hover,
+.portfolio-filter .button:focus {
+  color: $color-white;
+  background-color: $color-accent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Правый марджин для сетки многострочного контейнера, исключаем каждый третий */
+.portfolio-card:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* Нижний марджин для сетки многострочного контейнера, исключаем три нижних */
+.portfolio-card:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+/* Рассчет ширины карточки в портфолио */
+.portfolio-card {
+  width: calc((100% - 2 * 30px) / 3);
+}
+
+/* Тень при ховере на карточках-ссылках портфолио */
+.portfolio-link {
+  display: block;
+  border: 1px solid $color-border;
+}
+
+.portfolio-card-image {
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.portfolio-card-overley {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: $color-white;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform $time $time-function;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  border: 1px solid $color-border;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-link:hover .portfolio-card-overley,
+.portfolio-link:focus .portfolio-card-overley {
+  transform: translateY(0%);
+}
+
+/* Заголовки под карточками в портфолио */
+.portfolio-card-title > .title {
+  margin-bottom: 4px;
+
+  color: $text-header;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+/* Бордер с трех сторон контейнера с текстом под имиджем карточек портфолио */
+.portfolio-card-title {
+  padding: 20px 24px;
+  text-align: start;
+}
+
+/* Текст под карточками портфолио */
+.portfolio-card-title > .text {
+  color: $text-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
