@@ -1,22 +1,22 @@
 /* Общие параметры для двух списков верхней линии */
 
-.studio-list-contacts {
+.header-list-contacts {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
-.studio-list-contacts > .item:not(:last-child) {
+.header-list-contacts > .item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Параметры ссылок для обратной связи */
-.studio-list-contacts .link {
+.header-list-contacts .link {
   color: $text-main;
   align-items: center;
   transition: background-color $time $time-function, color $time $time-function;
 }
 /* Паддинги на ссылках для расширения области реагирования на ховер */
 
-.studio-list-contacts .link {
+.header-list-contacts .link {
   padding: 32px 0px;
 }
 /* Иконки в хедере */
@@ -25,14 +25,14 @@
   fill: $text-main;
   transition: fill $time $time-function;
 }
-.studio-list-contacts .link:hover .contact-icon,
-.studio-list-contacts .link:focus .contact-icon {
+.header-list-contacts .link:hover .contact-icon,
+.header-list-contacts .link:focus .contact-icon {
   fill: $color-accent;
 }
 
 /*  hover и focus для ссылок навигации по сайту*/
 
-.studio-list-contacts .link:hover,
-.studio-list-contacts .link:focus {
+.header-list-contacts .link:hover,
+.header-list-contacts .link:focus {
   color: $color-accent;
 }

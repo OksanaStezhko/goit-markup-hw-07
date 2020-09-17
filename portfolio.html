@@ -24,11 +24,11 @@
     <!--Верхняя линия-->
     <header class="section header">
       <div class="container topline flexbox">
-        <nav class="studio-nav nomargin flexbox">
+        <nav class="navigation nomargin flexbox">
           <a href="" class="link logo">
             <span class="logo-part-one">Web</span>Studio</a
           >
-          <ul class="list studio-list-page flexbox">
+          <ul class="list header-list-page flexbox">
             <li class="item">
               <a href="./index.html" class="link">Студия</a>
             </li>
@@ -40,7 +40,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="list studio-list-contacts flexbox">
+        <ul class="list header-list-contacts flexbox">
           <li class="item">
             <a href="mailto:info@devstudio.com" class="link flexbox">
               <svg
@@ -282,13 +282,13 @@
     </main>
     <footer class="section footer">
       <div class="container flexbox">
-        <div class="footer-contacts">
+        <div class="footer-box-contacts">
           <a href="" class="link logo">
             <span class="logo-part-one">Web</span
             ><span class="logo-part-two">Studio</span></a
           >
 
-          <address class="footer-address .nomargin">
+          <address class="address .nomargin">
             <p class="address-mail nomargin">г. Киев, пр-т Леси Украинки, 26</p>
             <a href="mailto:info@example.com" class="link address-email"
               >info@example.com
@@ -298,9 +298,9 @@
             >
           </address>
         </div>
-        <div class="footer-social">
+        <div class="footer-box-social">
           <p class="nomargin text">Присоединяйтесь</p>
-          <ul class="list social-list flexbox">
+          <ul class="list social-network flexbox">
             <li class="social-item">
               <a href="" class="social-link flexbox">
                 <svg class="social-icon">
@@ -331,21 +331,25 @@
             </li>
           </ul>
         </div>
-        <form class="form-footer">
+        <div class="footer-box-form">
           <p class="nomargin text">Подпишитесь на рассылку</p>
-          <div class="form-footer-box flexbox">
-            <label class="form-footer-mail">
-              <input
-                type="email"
-                class="form-footer-input"
-                placeholder="E-mail"
-              />
-            </label>
-            <button type="submit" class="form-footer-button flexbox">
+          <form
+            method="POST"
+            autocomplete="off"
+            id="form-join"
+            class="form-join flexbox"
+          >
+            <input
+              type="email"
+              class="form-join-input"
+              name="user-email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="form-join-button flexbox">
               Подписаться
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
   </body>

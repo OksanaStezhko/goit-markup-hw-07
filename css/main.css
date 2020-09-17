@@ -105,7 +105,7 @@ img {
 }
 
 /* Логотип в хедере */
-.studio-nav .logo {
+.navigation .logo {
   margin-right: 93px;
   padding: 24px 0px 25px;
 }
@@ -125,32 +125,32 @@ img {
           justify-content: space-between;
 }
 
-.studio-nav {
+.navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 /* Общие параметры для двух списков верхней линии */
-.studio-list-page {
+.header-list-page {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
 
 /* Правые марджины внутри списков из nav и списка контактов */
-.studio-list-page > .item:not(:last-child) {
+.header-list-page > .item:not(:last-child) {
   margin-right: 50px;
 }
 
 /* Параметры ссылок навигации по сайту */
-.studio-list-page .link {
+.header-list-page .link {
   color: #212121;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Паддинги на ссылках для расширения области реагирования на ховер */
-.studio-list-page .link {
+.header-list-page .link {
   padding: 32px 0px;
 }
 
@@ -169,23 +169,23 @@ img {
 
 /*  hover и focus для ссылок навигации по сайту*/
 .link.current,
-.studio-list-page .link:hover,
-.studio-list-page .link:focus {
+.header-list-page .link:hover,
+.header-list-page .link:focus {
   color: #2196f3;
 }
 
 /* Общие параметры для двух списков верхней линии */
-.studio-list-contacts {
+.header-list-contacts {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
 
-.studio-list-contacts > .item:not(:last-child) {
+.header-list-contacts > .item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Параметры ссылок для обратной связи */
-.studio-list-contacts .link {
+.header-list-contacts .link {
   color: #757575;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -195,7 +195,7 @@ img {
 }
 
 /* Паддинги на ссылках для расширения области реагирования на ховер */
-.studio-list-contacts .link {
+.header-list-contacts .link {
   padding: 32px 0px;
 }
 
@@ -207,14 +207,14 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.studio-list-contacts .link:hover .contact-icon,
-.studio-list-contacts .link:focus .contact-icon {
+.header-list-contacts .link:hover .contact-icon,
+.header-list-contacts .link:focus .contact-icon {
   fill: #2196f3;
 }
 
 /*  hover и focus для ссылок навигации по сайту*/
-.studio-list-contacts .link:hover,
-.studio-list-contacts .link:focus {
+.header-list-contacts .link:hover,
+.header-list-contacts .link:focus {
   color: #2196f3;
 }
 
@@ -444,6 +444,19 @@ img {
   fill: #ffffff;
 }
 
+/* Ссыли на соц.сети в футере */
+.footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .social-link:hover,
+.footer .social-link:focus {
+  background-color: #2196f3;
+}
+
 .clients-list > .item {
   width: calc((100% - 30px * 5) / 6);
 }
@@ -501,8 +514,8 @@ img {
 }
 
 /* Текст над ссылками на соц.сети в футере */
-.footer-social > .text,
-.form-footer-box > .text {
+.footer-box-social > .text,
+.footer-box-form > .text {
   margin-bottom: 20px;
   text-align: start;
   color: #ffffff;
@@ -511,32 +524,19 @@ img {
   line-height: 1.14;
 }
 
-/* Ссыли на соц.сети в футере */
-.footer .social-link {
-  background-color: rgba(255, 255, 255, 0.1);
-  fill: #ffffff;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .social-link:hover,
-.footer .social-link:focus {
-  background-color: #2196f3;
-}
-
-.form-footer-box {
+.footer-box-form {
   margin-left: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.form-footer {
+.form-join {
   width: 570px;
   text-align: start;
 }
 
-.form-footer-input {
+.form-join-input {
   padding: 15px 16px;
   margin-right: 12px;
   width: 358px;
@@ -553,23 +553,23 @@ img {
   border-radius: 4px;
 }
 
-.form-footer-input::-webkit-input-placeholder {
+.form-join-input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.form-footer-input:-ms-input-placeholder {
+.form-join-input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.form-footer-input::-ms-input-placeholder {
+.form-join-input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.form-footer-input::placeholder {
+.form-join-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.form-footer-button {
+.form-join-button {
   position: relative;
   padding: 10px 28px;
   width: 200px;
@@ -583,7 +583,7 @@ img {
   border-radius: 4px;
 }
 
-.form-footer-button::after {
+.form-join-button::after {
   position: absolute;
   top: 50%;
   right: 0;
