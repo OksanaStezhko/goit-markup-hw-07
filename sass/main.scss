@@ -225,7 +225,7 @@ img {
 /* Параметры заголовка h1 на странице Studio */
 .primary .title {
   margin-bottom: 30px;
-  
+
   font: $font-primary-title;
   color: $color-white;
   letter-spacing: 0.06em;
@@ -694,6 +694,8 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow: auto;
+  z-index: 1;
   transition: opacity $time $time-function;
 }
 
