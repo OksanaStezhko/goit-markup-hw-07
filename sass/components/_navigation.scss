@@ -1,19 +1,19 @@
 /* Общие параметры для двух списков верхней линии */
-.header-list-page {
+.navigation-list {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
 /* Правые марджины внутри списков из nav и списка контактов */
-.header-list-page > .item:not(:last-child) {
+.navigation-list > .item:not(:last-child) {
   margin-right: 50px;
 }
 /* Параметры ссылок навигации по сайту */
-.header-list-page .link {
+.navigation-list .link {
   color: $text-header;
   transition: background-color $time $time-function, color $time $time-function;
 }
 /* Паддинги на ссылках для расширения области реагирования на ховер */
-.header-list-page .link {
+.navigation-list .link {
   padding: 32px 0px;
 }
 
@@ -33,7 +33,7 @@
 
 /*  hover и focus для ссылок навигации по сайту*/
 .link.current,
-.header-list-page .link:hover,
-.header-list-page .link:focus {
+.navigation-list .link:hover,
+.navigation-list .link:focus {
   color: $color-accent;
 }

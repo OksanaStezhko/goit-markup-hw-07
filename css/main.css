@@ -132,25 +132,25 @@ img {
 }
 
 /* Общие параметры для двух списков верхней линии */
-.header-list-page {
+.navigation-list {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
 
 /* Правые марджины внутри списков из nav и списка контактов */
-.header-list-page > .item:not(:last-child) {
+.navigation-list > .item:not(:last-child) {
   margin-right: 50px;
 }
 
 /* Параметры ссылок навигации по сайту */
-.header-list-page .link {
+.navigation-list .link {
   color: #212121;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Паддинги на ссылках для расширения области реагирования на ховер */
-.header-list-page .link {
+.navigation-list .link {
   padding: 32px 0px;
 }
 
@@ -169,23 +169,23 @@ img {
 
 /*  hover и focus для ссылок навигации по сайту*/
 .link.current,
-.header-list-page .link:hover,
-.header-list-page .link:focus {
+.navigation-list .link:hover,
+.navigation-list .link:focus {
   color: #2196f3;
 }
 
 /* Общие параметры для двух списков верхней линии */
-.header-list-contacts {
+.contacts {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
 
-.header-list-contacts > .item:not(:last-child) {
+.contacts > .item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Параметры ссылок для обратной связи */
-.header-list-contacts .link {
+.contacts .link {
   color: #757575;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -195,26 +195,26 @@ img {
 }
 
 /* Паддинги на ссылках для расширения области реагирования на ховер */
-.header-list-contacts .link {
+.contacts .link {
   padding: 32px 0px;
 }
 
 /* Иконки в хедере */
-.contact-icon {
+.contacts-icon {
   margin-right: 10px;
   fill: #757575;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list-contacts .link:hover .contact-icon,
-.header-list-contacts .link:focus .contact-icon {
+.contacts .link:hover .contacts-icon,
+.contacts .link:focus .contacts-icon {
   fill: #2196f3;
 }
 
 /*  hover и focus для ссылок навигации по сайту*/
-.header-list-contacts .link:hover,
-.header-list-contacts .link:focus {
+.contacts .link:hover,
+.contacts .link:focus {
   color: #2196f3;
 }
 
@@ -410,16 +410,16 @@ img {
 }
 
 /* Ссылки на соц.сети в карточках Наша команда */
-.social-item:not(:nth-child(4)) {
+.social-network-item:not(:nth-child(4)) {
   margin-right: 10px;
 }
 
-.social-icon {
+.social-network-icon {
   width: 20px;
   height: 20px;
 }
 
-.social-link {
+.social-network-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -431,29 +431,29 @@ img {
           align-items: center;
 }
 
-.team .social-link {
+.team .social-network-link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: #afb1b8;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team .social-link:hover,
-.team .social-link:focus {
+.team .social-network-link:hover,
+.team .social-network-link:focus {
   background-color: #2196f3;
   fill: #ffffff;
 }
 
 /* Ссыли на соц.сети в футере */
-.footer .social-link {
+.footer .social-network-link {
   background-color: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer .social-link:hover,
-.footer .social-link:focus {
+.footer .social-network-link:hover,
+.footer .social-network-link:focus {
   background-color: #2196f3;
 }
 
@@ -507,13 +507,12 @@ img {
           align-items: baseline;
 }
 
-.footer-contacts {
+.footer-box-contacts {
   margin-right: 70px;
   min-width: 231px;
   text-align: start;
 }
 
-/* Текст над ссылками на соц.сети в футере */
 .footer-box-social > .text,
 .footer-box-form > .text {
   margin-bottom: 20px;

@@ -1,38 +1,38 @@
 /* Общие параметры для двух списков верхней линии */
 
-.header-list-contacts {
+.contacts {
   letter-spacing: 0.02em;
   font-weight: 500;
 }
-.header-list-contacts > .item:not(:last-child) {
+.contacts > .item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* Параметры ссылок для обратной связи */
-.header-list-contacts .link {
+.contacts .link {
   color: $text-main;
   align-items: center;
   transition: background-color $time $time-function, color $time $time-function;
 }
 /* Паддинги на ссылках для расширения области реагирования на ховер */
 
-.header-list-contacts .link {
+.contacts .link {
   padding: 32px 0px;
 }
 /* Иконки в хедере */
-.contact-icon {
+.contacts-icon {
   margin-right: 10px;
   fill: $text-main;
   transition: fill $time $time-function;
 }
-.header-list-contacts .link:hover .contact-icon,
-.header-list-contacts .link:focus .contact-icon {
+.contacts .link:hover .contacts-icon,
+.contacts .link:focus .contacts-icon {
   fill: $color-accent;
 }
 
 /*  hover и focus для ссылок навигации по сайту*/
 
-.header-list-contacts .link:hover,
-.header-list-contacts .link:focus {
+.contacts .link:hover,
+.contacts .link:focus {
   color: $color-accent;
 }
