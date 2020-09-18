@@ -3,36 +3,35 @@
 .contacts {
   letter-spacing: 0.02em;
   font-weight: 500;
-}
-.contacts > .item:not(:last-child) {
-  margin-right: 30px;
-}
 
-/* Параметры ссылок для обратной связи */
-.contacts .link {
-  color: $text-main;
-  align-items: center;
-  transition: background-color $time $time-function, color $time $time-function;
-}
-/* Паддинги на ссылках для расширения области реагирования на ховер */
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
 
-.contacts .link {
-  padding: 32px 0px;
-}
-/* Иконки в хедере */
-.contacts-icon {
-  margin-right: 10px;
-  fill: $text-main;
-  transition: fill $time $time-function;
-}
-.contacts .link:hover .contacts-icon,
-.contacts .link:focus .contacts-icon {
-  fill: $color-accent;
-}
+  /* Параметры ссылок для обратной связи */
+  &-link {
+    padding: 32px 0px;
+    color: $text-main;
+    align-items: center;
+    transition: background-color $time $time-function,
+      color $time $time-function;
+  }
 
-/*  hover и focus для ссылок навигации по сайту*/
+  &-icon {
+    margin-right: 10px;
+    fill: $text-main;
+    transition: fill $time $time-function;
+  }
 
-.contacts .link:hover,
-.contacts .link:focus {
-  color: $color-accent;
+  &-link:hover &-icon,
+  &-link:focus &-icon {
+    fill: $color-accent;
+  }
+
+  /*  hover и focus для ссылок навигации по сайту*/
+
+  &-link:hover,
+  &-link:focus {
+    color: $color-accent;
+  }
 }

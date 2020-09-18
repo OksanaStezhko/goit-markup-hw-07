@@ -1,0 +1,35 @@
+.activity {
+  padding-bottom: 94px;
+
+  &-title {
+    margin-bottom: 50px;
+  }
+
+  &-card {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    width: calc((100% - 30px * 2) / 3);
+  }
+
+  &-card:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  &-label {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 27px 0px;
+    width: 370px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

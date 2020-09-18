@@ -22,7 +22,7 @@
 }
 
 /* Параметры заголовка h1 на странице Studio */
-.primary .title {
+.primary-title {
   margin-bottom: 30px;
 
   font: $font-primary-title;
@@ -32,7 +32,7 @@
 }
 
 /* Параметры кнопки в секции Шапка*/
-.primary .button {
+.primary-button {
   padding: 10px;
   min-width: 200px;
   color: $color-white;
@@ -50,7 +50,7 @@
 
   transition: background-color $time $time-function;
 }
-.primary .button:hover,
-.primary .button:focus {
+.primary-button:hover,
+.primary-button:focus {
   background-color: $bgd-hover;
 }

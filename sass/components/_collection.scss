@@ -1,0 +1,24 @@
+.collection {
+  &-item {
+    width: calc((100% - 30px * 5) / 6);
+  }
+  &-item:not(:nth-child(6n)) {
+    margin-right: 30px;
+  }
+  &-link {
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 170px;
+    border: 1px solid $color-icon;
+    border-radius: 4px;
+    fill: $color-icon;
+    transition: border-color $time $time-function, fill $time $time-function;
+  }
+
+  &-link:hover,
+  &-link:focus {
+    fill: $color-accent;
+    border: 1px solid $color-accent;
+  }
+}

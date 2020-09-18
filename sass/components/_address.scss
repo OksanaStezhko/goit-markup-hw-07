@@ -1,21 +1,22 @@
-/* Адрес: ссылки и текст  */
-.address-mail {
-  margin-top: 0px;
-  margin-bottom: 9px;
-  color: $color-white;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-}
-.address-email,
-.address-tel {
-  display: block;
+.address {
+  &-mail {
+    margin-top: 0px;
+    margin-bottom: 9px;
+    color: $color-white;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+  }
+  &-email,
+  &-tel {
+    display: block;
 
-  color: $color-link-address;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-}
-.address-email {
-  margin-bottom: 9px;
+    color: $color-link-address;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.71;
+  }
+  &-email {
+    margin-bottom: 9px;
+  }
 }
