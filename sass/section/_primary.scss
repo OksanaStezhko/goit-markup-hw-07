@@ -1,56 +1,52 @@
 .primary {
   border-top: 1px solid $color-line;
-}
+  .background {
+    max-width: 1600px;
+    margin: 0px auto;
+    padding: 200px 0px;
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/primary.jpg');
+  }
 
-.background {
-  max-width: 1600px;
-  margin: 0px auto;
-  padding: 200px 0px;
-  height: 600px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/primary.jpg');
-}
+  &-box {
+    display: inline-block;
+    width: 696px;
+  }
 
-/* Контейнер для заголовка и кноки секции Шапка */
-.primary-box {
-  display: inline-block;
-  width: 696px;
-}
+  &-title {
+    margin-bottom: 30px;
 
-/* Параметры заголовка h1 на странице Studio */
-.primary-title {
-  margin-bottom: 30px;
+    font: $font-primary-title;
+    color: $color-white;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 
-  font: $font-primary-title;
-  color: $color-white;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
+  &-button {
+    padding: 10px;
+    min-width: 200px;
+    color: $color-white;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
 
-/* Параметры кнопки в секции Шапка*/
-.primary-button {
-  padding: 10px;
-  min-width: 200px;
-  color: $color-white;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+    border: none;
+    border-radius: 4px;
+    background-color: $color-accent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 
-  border: none;
-  border-radius: 4px;
-  background-color: $color-accent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-
-  transition: background-color $time $time-function;
-}
-.primary-button:hover,
-.primary-button:focus {
-  background-color: $bgd-hover;
+    transition: background-color $time $time-function;
+  }
+  &-button:hover,
+  &-button:focus {
+    background-color: $bgd-hover;
+  }
 }

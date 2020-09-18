@@ -1,37 +1,37 @@
-/* Ссылки на соц.сети в карточках Наша команда */
-.social-network-item:not(:nth-child(4)) {
-  margin-right: 10px;
-}
-.social-network-icon {
-  width: 20px;
-  height: 20px;
-}
-.social-network-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
+.social-network {
+  &-item:not(:nth-child(4)) {
+    margin-right: 10px;
+  }
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+  &-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
 
-.team .social-network-link {
-  background-color: $bgd-icon-footer;
-  fill: $color-icon;
-  transition: background-color $time $time-function, fill $time $time-function;
-}
-.team .social-network-link:hover,
-.team .social-network-link:focus {
-  background-color: $color-accent;
-  fill: $color-white;
-}
+  .team &-link {
+    background-color: $bgd-icon-footer;
+    fill: $color-icon;
+    transition: background-color $time $time-function, fill $time $time-function;
+  }
+  .team &-link:hover,
+  .team &-link:focus {
+    background-color: $color-accent;
+    fill: $color-white;
+  }
 
-/* Ссыли на соц.сети в футере */
-.footer .social-network-link {
-  background-color: $bgd-icon-footer;
-  fill: $color-white;
-  transition: background-color $time $time-function;
-}
-.footer .social-network-link:hover,
-.footer .social-network-link:focus {
-  background-color: $color-accent;
+  .footer &-link {
+    background-color: $bgd-icon-footer;
+    fill: $color-white;
+    transition: background-color $time $time-function;
+  }
+  .footer &-link:hover,
+  .footer &-link:focus {
+    background-color: $color-accent;
+  }
 }
