@@ -18,12 +18,13 @@ $color-link-address: rgba(255, 255, 255, 0.6);
 $time-function: cubic-bezier(0.4, 0, 0.2, 1);
 $time: 250ms;
 
-$font-roboto: Roboto, sans-serif;
-$font-raleway: Raleway, sans-serif;
+//Типография
+$font-main: Roboto, sans-serif;
+$font-second: Raleway, sans-serif;
 $font-style: normal;
 $font-size-main: 14px;
-$ls-main: 0.03em;
-//font:italic normal bold 150%/18px Tahoma,Verdana;
-$font-title: normal 700 36px/1.16 Roboto, sans-serif;
-$font-primary-title: normal 900 44px/1.36 Roboto, sans-serif;
-//используем максин для шрифтов
+$font-size-title: 36px;
+$font-weight-main: 400;
+$font-weight-title: 700;
+$line-height-title: 1.16;
+$letter-spacing-main: 0.03em;

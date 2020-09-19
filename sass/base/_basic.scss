@@ -1,28 +1,17 @@
-%nomargin {
-  margin: 0px;
-}
-%list {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-
-%link {
-  text-decoration: none;
-  margin: 0px;
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@mixin flexbox(
-  $align: normal,
-  $justify: normal,
-  $wrap: nowrap,
-  $flex-type: flex
-) {
-  display: $flex-type;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -32,45 +21,4 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.title {
-  margin: 0px;
-  font: $font-title;
-  color: $text-header;
-  letter-spacing: $ls-main;
-}
-
-.section {
-  text-align: center;
-}
-
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.studio-page,
-.portfolio-page {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  color: $text-main;
-  letter-spacing: 0.03em;
-}
-
-.features,
-.team,
-.clients,
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }

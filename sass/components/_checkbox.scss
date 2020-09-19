@@ -1,15 +1,15 @@
 .form-checkbox {
   @include flexbox(center);
   margin-bottom: 30px;
+  @include typography(400, 14px, 1.71);
 
   &-label {
-    margin-left: 7px;
-    font-size: 14px;
-    line-height: 1.71;
     margin-right: 5px;
+    margin-left: 7px;
+    color: $text-main;
   }
+
   &-link {
-    @extend %link;
     color: $color-accent;
   }
 

@@ -17,9 +17,10 @@
 
 .modal {
   &-title {
+    @extend %nomargin;
     margin-bottom: 15px;
-    font-size: 20px;
-    line-height: 1.15;
+
+    @include typography(700, 20px, 1.15);
     text-align: center;
   }
 

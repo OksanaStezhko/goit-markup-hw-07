@@ -1,17 +1,6 @@
-.background {
-  max-width: 1600px;
-  margin: 0px auto;
-  padding: 200px 0px;
-  height: 600px;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url('../images/primary.jpg');
-}
-
 .primary {
+  @extend %section;
+  padding-top: 0;
   border-top: 1px solid $color-line;
 
   &-box {
@@ -21,11 +10,9 @@
 
   &-title {
     @extend %nomargin;
+    @include typography(900, 44px, 1.36, 0.06em);
     margin-bottom: 30px;
-
-    font: $font-primary-title;
     color: $color-white;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
@@ -33,6 +20,7 @@
     padding: 10px;
     min-width: 200px;
     color: $color-white;
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -51,4 +39,16 @@
   &-button:focus {
     background-color: $bgd-hover;
   }
+}
+.background {
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 200px 0px;
+  height: 600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/primary.jpg');
 }

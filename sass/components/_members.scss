@@ -18,25 +18,25 @@
   }
 
   &-title {
+    @extend %nomargin;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @include typography-title;
   }
   &-name {
     @extend %nomargin;
     margin-bottom: 10px;
 
+    @include typography(500, 16px, 1.19);
     color: $text-header;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
   }
 
   &-position {
     @extend %nomargin;
-    color: $text-main;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1.19;
     margin-bottom: 10px;
+
+    @include typography(400, 16px, 1.19);
+    color: $text-main;
   }
 }

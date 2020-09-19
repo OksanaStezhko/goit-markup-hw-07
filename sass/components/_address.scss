@@ -1,23 +1,19 @@
 .address {
   @extend %nomargin;
+  @include typography(400, 14px, 1.71);
+
   &-mail {
     @extend %nomargin;
     margin-top: 0px;
     margin-bottom: 9px;
     color: $color-white;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.71;
   }
+
   &-email,
   &-tel {
     @extend %link;
     display: block;
-
     color: $color-link-address;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.71;
   }
   &-email {
     margin-bottom: 9px;

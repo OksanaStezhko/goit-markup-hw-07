@@ -1,12 +1,11 @@
 .filters {
   @extend %list;
-  display: inline-flex;
+  @include flexbox(normal, center, nowrap, inline-flex);
   margin-bottom: 34px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 16px;
   cursor: pointer;
-  justify-content: center;
 
   &-item:not(:last-child) {
     margin-right: 8px;
@@ -15,11 +14,8 @@
   &-button {
     padding: 6px 22px;
 
+    @include typography(500, 16px, 1.62);
     color: $text-header;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.03em;
     text-align: center;
 
     background-color: $bgd-second;
@@ -30,7 +26,7 @@
     transition: background-color $time $time-function,
       color $time $time-function;
   }
-  /* Ховер и фокус для кнопок фильтров портфолио */
+
   &-button:hover,
   &-button:focus {
     color: $color-white;
