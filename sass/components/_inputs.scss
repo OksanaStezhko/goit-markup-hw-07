@@ -1,0 +1,64 @@
+.form-inputs {
+  text-align: start;
+  margin-bottom: 20px;
+
+  &-item {
+    margin-bottom: 10px;
+  }
+
+  &-input {
+    padding: 11px 0px 11px 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color $time $time-function;
+  }
+
+  &-input:focus-within {
+    border-color: $color-accent;
+  }
+  &-field {
+    position: relative;
+    flex-direction: column;
+  }
+
+  &-field:focus-within &-icon {
+    fill: $color-accent;
+  }
+  &-icon {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-11px);
+    margin-left: 12px;
+    transition: fill $time $time-function;
+  }
+  &-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.01em;
+  }
+  &-comment {
+    resize: none;
+    padding: 12px 16px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color $time $time-function;
+  }
+  &-comment::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &-comment:focus-within {
+    border-color: $color-accent;
+  }
+}
