@@ -1,4 +1,5 @@
 .logo {
+  @extend %link;
   font-family: Raleway, sans-serif;
   color: $text-header;
   font-weight: 700;

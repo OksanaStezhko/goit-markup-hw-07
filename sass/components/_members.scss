@@ -1,7 +1,10 @@
 .members {
+  @extend %list;
+  @include flexbox($wrap: wrap);
+
   &-card {
+    @include flexbox(center);
     flex-direction: column;
-    align-items: center;
     width: calc((100% - 30px * 3) / 4);
 
     background-color: $color-white;
@@ -19,6 +22,7 @@
     padding-bottom: 30px;
   }
   &-name {
+    @extend %nomargin;
     margin-bottom: 10px;
 
     color: $text-header;
@@ -28,6 +32,7 @@
   }
 
   &-position {
+    @extend %nomargin;
     color: $text-main;
     font-weight: normal;
     font-size: 16px;

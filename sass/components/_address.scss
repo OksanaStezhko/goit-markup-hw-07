@@ -1,5 +1,7 @@
 .address {
+  @extend %nomargin;
   &-mail {
+    @extend %nomargin;
     margin-top: 0px;
     margin-bottom: 9px;
     color: $color-white;
@@ -9,6 +11,7 @@
   }
   &-email,
   &-tel {
+    @extend %link;
     display: block;
 
     color: $color-link-address;

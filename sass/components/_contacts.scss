@@ -1,6 +1,8 @@
 /* Общие параметры для двух списков верхней линии */
 
 .contacts {
+  @extend %list;
+  @include flexbox();
   letter-spacing: 0.02em;
   font-weight: 500;
 
@@ -10,9 +12,10 @@
 
   /* Параметры ссылок для обратной связи */
   &-link {
+    @extend %link;
+    @include flexbox(center);
     padding: 32px 0px;
     color: $text-main;
-    align-items: center;
     transition: background-color $time $time-function,
       color $time $time-function;
   }

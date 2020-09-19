@@ -1,4 +1,5 @@
 .filters {
+  @extend %list;
   display: inline-flex;
   margin-bottom: 34px;
   margin-right: auto;

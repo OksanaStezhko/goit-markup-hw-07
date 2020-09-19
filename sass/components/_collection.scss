@@ -1,13 +1,17 @@
 .collection {
+  @extend %list;
+  @include flexbox($wrap: wrap);
+
   &-item {
+    @include flexbox();
     width: calc((100% - 30px * 5) / 6);
   }
   &-item:not(:nth-child(6n)) {
     margin-right: 30px;
   }
   &-link {
-    justify-content: center;
-    align-items: center;
+    @extend %link;
+    @include flexbox(center, center);
     height: 90px;
     width: 170px;
     border: 1px solid $color-icon;

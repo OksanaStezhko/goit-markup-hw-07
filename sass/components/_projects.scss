@@ -1,4 +1,7 @@
 .projects {
+  @extend %list;
+  @include flexbox($wrap: wrap);
+
   &-card:not(:nth-child(3n)) {
     margin-right: 30px;
   }
@@ -12,17 +15,19 @@
   }
 
   &-link {
+    @extend %link;
     display: block;
     border: 1px solid $color-border;
   }
 
   &-image {
+    @include flexbox($justify: center);
     position: relative;
-    justify-content: center;
     overflow: hidden;
   }
 
   &-overley {
+    @extend %nomargin;
     position: absolute;
     top: 0;
     left: 0;
@@ -71,6 +76,7 @@
   }
 
   &-label {
+    @extend %nomargin;
     color: $text-main;
     font-weight: 400;
     font-size: 16px;

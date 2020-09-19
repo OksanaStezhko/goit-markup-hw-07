@@ -1,4 +1,3 @@
 .topline {
-  align-items: center;
-  justify-content: space-between;
+  @include flexbox(center, space-between);
 }

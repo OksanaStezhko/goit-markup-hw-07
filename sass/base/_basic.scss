@@ -1,22 +1,28 @@
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+%nomargin {
+  margin: 0px;
 }
-
-.list {
+%list {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
 
-/* Общее - ссылки */
-.link {
+%link {
   text-decoration: none;
   margin: 0px;
 }
 
-/* Общее - скрыть объект */
+@mixin flexbox(
+  $align: normal,
+  $justify: normal,
+  $wrap: nowrap,
+  $flex-type: flex
+) {
+  display: $flex-type;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -27,34 +33,23 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-/* Общее - без марджинов */
-.nomargin,
-.title {
-  margin: 0px;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Общее - заголовки*/
 .title {
+  margin: 0px;
   font: $font-title;
   color: $text-header;
   letter-spacing: $ls-main;
 }
 
-.flexbox {
-  display: flex;
-}
-
-.wrap {
-  flex-wrap: wrap;
-}
-
-/* Общее - секции*/
 .section {
   text-align: center;
 }
 
-/* Общее - основной контейнер */
 .container {
   width: 1200px;
   margin-left: auto;
@@ -72,7 +67,6 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* Общее - паддинги секций */
 .features,
 .team,
 .clients,

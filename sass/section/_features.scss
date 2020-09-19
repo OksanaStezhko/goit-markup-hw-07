@@ -1,6 +1,7 @@
 .features {
   &-list {
-    justify-content: space-between;
+    @extend %list;
+    @include flexbox($justify: space-between);
   }
 
   &-card {
@@ -18,19 +19,21 @@
     text-transform: uppercase;
   }
   &-image {
-    background-color: $bgd-second;
     margin-bottom: 30px;
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
+
+    background-color: $bgd-second;
     border-radius: 4px;
   }
+
   &-icon {
     width: 70px;
     height: 70px;
   }
 
   &-text {
-    //перенести общие стили из боди
+    @extend %nomargin;
   }
 }

@@ -1,6 +1,6 @@
 .form-checkbox {
+  @include flexbox(center);
   margin-bottom: 30px;
-  align-items: center;
 
   &-label {
     margin-left: 7px;
@@ -9,6 +9,7 @@
     margin-right: 5px;
   }
   &-link {
+    @extend %link;
     color: $color-accent;
   }
 

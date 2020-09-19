@@ -1,4 +1,5 @@
 .form-join {
+  @include flexbox();
   width: 570px;
   text-align: start;
 
@@ -24,6 +25,8 @@
   }
 
   &-button {
+    @include flexbox();
+
     position: relative;
     padding: 10px 28px;
     width: 200px;
