@@ -1,7 +1,7 @@
 .logo {
   @extend %link;
 
-  @include typography(700, 26px, 1.19, 0.03em, $font-second);
+  @include typography(700, 26px, 1.192, $letter-spacing-main, $font-second);
   font-family: Raleway, sans-serif;
   color: $text-header;
 

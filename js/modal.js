@@ -13,7 +13,7 @@
   }
 
   const inputs = document.querySelectorAll('input[type=checkbox]');
-  const button = document.querySelector('.form-submit');
+  const button = document.querySelector('.form-modal-submit');
   function check() {
     button.disabled = true;
     inputs.forEach(input => {
