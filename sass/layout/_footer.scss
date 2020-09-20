@@ -3,7 +3,7 @@
   padding-bottom: 60px;
   background-color: $color-section;
 
-  & .container {
+  &-container {
     @include flexbox(baseline);
   }
 
