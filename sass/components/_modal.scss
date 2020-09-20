@@ -35,7 +35,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: $color-white;
+    background-color: $text-on-dark;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: fill $time $time-function, transform $time $time-function;
   }
@@ -46,10 +46,6 @@
     transform: scale(1.1);
   }
 
-  &-icon-close {
-    justify-content: center;
-    align-items: center;
-  }
   .backdrop & {
     position: absolute;
     top: 50%;
@@ -58,7 +54,7 @@
     padding: 40px;
     width: 528px;
     height: 581px;
-    background-color: $color-white;
+    background-color: $text-on-dark;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;

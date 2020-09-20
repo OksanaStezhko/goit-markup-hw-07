@@ -25,12 +25,12 @@
   .team &-link:hover,
   .team &-link:focus {
     background-color: $color-accent;
-    fill: $color-white;
+    fill: $text-on-dark;
   }
 
   .footer &-link {
     background-color: $bgd-icon-footer;
-    fill: $color-white;
+    fill: $text-on-dark;
     transition: background-color $time $time-function;
   }
   .footer &-link:hover,

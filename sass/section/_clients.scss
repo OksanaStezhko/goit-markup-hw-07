@@ -3,7 +3,7 @@
 
   &-title {
     @extend %nomargin;
-    @include typography-title;
     margin-bottom: 50px;
+    @include typography-title;
   }
 }

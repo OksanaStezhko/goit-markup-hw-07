@@ -4,12 +4,9 @@
   background-color: $color-section;
 
   & .container {
-    @include flexbox();
+    @include flexbox(baseline);
   }
 
-  & > .flexbox {
-    align-items: baseline;
-  }
   &-box-contacts {
     margin-right: 70px;
     min-width: 231px;
@@ -18,16 +15,15 @@
 
   &-box-form {
     margin-left: auto;
-    justify-content: space-between;
   }
 
   &-label {
     @extend %nomargin;
     margin-bottom: 20px;
+
+    @include typography(700, 14px, 1.14);
     text-align: start;
-    color: $color-white;
+    color: $text-on-dark;
     text-transform: uppercase;
-    font-weight: 700;
-    line-height: 1.14;
   }
 }

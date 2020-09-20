@@ -20,7 +20,7 @@
     background-size: contain;
     background-origin: border-box;
     border: 1px solid $text-header;
-    background-color: $color-white;
+    background-color: $text-on-dark;
 
     transition: background-color $time $time-function;
   }

@@ -1,25 +1,24 @@
 .logo {
   @extend %link;
+
+  @include typography(700, 26px, 1.19, 0.03em, $font-second);
   font-family: Raleway, sans-serif;
   color: $text-header;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
 
   &-part-one {
     color: $color-accent;
   }
 
   &-part-two {
-    color: $color-white;
+    color: $text-on-dark;
   }
 
-  .navigation & {
+  &-navigation {
     margin-right: 93px;
     padding: 24px 0px 25px;
   }
 
-  .footer & {
+  &-footer {
     display: block;
     margin-bottom: 20px;
   }

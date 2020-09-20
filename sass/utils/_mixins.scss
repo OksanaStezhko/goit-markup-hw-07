@@ -28,8 +28,8 @@
 @mixin typography-title() {
   font-family: $font-main;
   font-style: normal;
-  font-weight: $font-weight-title;
-  font-size: $font-size-title;
+  font-weight: 700;
+  font-size: $size-title;
   line-height: $line-height-title;
   letter-spacing: $letter-spacing-main;
   color: $text-header;

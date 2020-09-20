@@ -17,3 +17,15 @@
   padding-bottom: 94px;
   text-align: center;
 }
+
+%button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  color: $text-on-dark;
+
+  @include typography(700, 16px, 1.87, 0.06em);
+  background-color: $color-accent;
+  border: none;
+  border-radius: 4px;
+}

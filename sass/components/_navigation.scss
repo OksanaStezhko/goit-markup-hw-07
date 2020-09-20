@@ -5,8 +5,7 @@
   &-list {
     @extend %list;
     @include flexbox();
-    letter-spacing: 0.02em;
-    font-weight: 500;
+    @include typography(500, 14px, 1.14, 0.02em);
   }
 
   &-list-item:not(:last-child) {

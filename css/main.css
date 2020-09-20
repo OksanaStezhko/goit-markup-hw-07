@@ -14,10 +14,26 @@
   margin: 0px;
 }
 
-.primary, .features, .activity, .team, .clients, .portfolio {
+.features, .activity, .team, .clients, .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
   text-align: center;
+}
+
+.primary-button, .form-join-button, .form-modal-submit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  color: #ffffff;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: #2196f3;
+  border: none;
+  border-radius: 4px;
 }
 
 .container {
@@ -46,11 +62,14 @@ img {
 }
 
 .logo {
-  font-family: Raleway, sans-serif;
-  color: #212121;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  letter-spacing: 0.03em;
+  font-family: Raleway, sans-serif;
+  color: #212121;
 }
 
 .logo-part-one {
@@ -61,12 +80,12 @@ img {
   color: #ffffff;
 }
 
-.navigation .logo {
+.logo-navigation {
   margin-right: 93px;
   padding: 24px 0px 25px;
 }
 
-.footer .logo {
+.logo-footer {
   display: block;
   margin-bottom: 20px;
 }
@@ -111,8 +130,12 @@ img {
           align-items: normal;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  letter-spacing: 0.02em;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .navigation-list-item:not(:last-child) {
@@ -204,7 +227,7 @@ img {
 }
 
 .primary {
-  padding-top: 0;
+  text-align: center;
   border-top: 1px solid #ececec;
 }
 
@@ -226,17 +249,6 @@ img {
 }
 
 .primary-button {
-  padding: 10px;
-  min-width: 200px;
-  color: #ffffff;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  border: none;
-  border-radius: 4px;
-  background-color: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -277,13 +289,13 @@ img {
 }
 
 .features-title {
+  margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
   color: #212121;
   text-transform: uppercase;
 }
@@ -365,10 +377,10 @@ img {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   padding: 27px 0px;
   width: 370px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -536,6 +548,7 @@ img {
 }
 
 .clients-title {
+  margin-bottom: 50px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -543,7 +556,6 @@ img {
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
 }
 
 .collection {
@@ -618,17 +630,11 @@ img {
   -webkit-box-pack: normal;
       -ms-flex-pack: normal;
           justify-content: normal;
-  -webkit-box-align: normal;
-      -ms-flex-align: normal;
-          align-items: normal;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-.footer > .flexbox {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .footer-box-contacts {
@@ -639,18 +645,19 @@ img {
 
 .footer-box-form {
   margin-left: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .footer-label {
   margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   text-align: start;
   color: #ffffff;
   text-transform: uppercase;
-  font-weight: 700;
-  line-height: 1.14;
 }
 
 .form-join {
@@ -673,6 +680,9 @@ img {
   padding: 15px 16px;
   margin-right: 12px;
   width: 358px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -715,16 +725,8 @@ img {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: relative;
-  padding: 10px 28px;
-  width: 200px;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  background-color: #2196f3;
-  border: none;
-  border-radius: 4px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .form-join-button::after {
@@ -992,15 +994,6 @@ img {
           transform: scale(1.1);
 }
 
-.modal-icon-close {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .backdrop .modal {
   position: absolute;
   top: 50%;
@@ -1031,17 +1024,10 @@ img {
 }
 
 .form-modal-submit {
-  padding: 10px 55px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
+  padding-left: 55px;
+  padding-right: 55px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
   -webkit-transition: backrgound-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: backrgound-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1104,8 +1090,8 @@ img {
 }
 
 .form-inputs {
-  text-align: start;
   margin-bottom: 20px;
+  text-align: start;
 }
 
 .form-inputs-item {
@@ -1153,15 +1139,18 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+  margin-left: 12px;
   -webkit-transform: translateY(-11px);
           transform: translateY(-11px);
-  margin-left: 12px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-inputs-label {
   margin-bottom: 4px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -1170,8 +1159,11 @@ img {
 .form-inputs-comment {
   resize: none;
   padding: 12px 16px;
-  font-size: 14px;
-  line-height: 1.14;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;

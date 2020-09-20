@@ -13,12 +13,13 @@
 
   &-title {
     @extend %nomargin;
-    @include typography(700, 14px, 1.14);
     margin-bottom: 10px;
 
+    @include typography(700, 14px, 1.14);
     color: $text-header;
     text-transform: uppercase;
   }
+
   &-image {
     margin-bottom: 30px;
     padding-top: 25px;

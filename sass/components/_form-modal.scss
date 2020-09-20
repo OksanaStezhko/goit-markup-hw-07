@@ -3,20 +3,10 @@
   text-align: center;
 
   &-submit {
-    padding: 10px 55px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-
-    color: $color-white;
-
-    background-color: $color-accent;
+    @extend %button;
+    padding-left: 55px;
+    padding-right: 55px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-
     transition: backrgound-color $time $time-function;
   }
 
