@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.navigation, .primary-title, .features-title, .features-text, .activity-title, .activity-label, .team-title, .members-title, .members-name, .members-position, .clients-title, .footer-label, .address, .address-mail, .projects-overley, .projects-name, .projects-label, .modal-title {
+.navigation, .primary-title, .features-label, .features-text, .activity-title, .activity-label, .team-title, .members-title, .members-name, .members-position, .clients-title, .footer-label, .address, .address-mail, .projects-overley, .projects-name, .projects-label, .modal-title {
   margin: 0px;
 }
 
@@ -288,7 +288,7 @@ img {
   text-align: start;
 }
 
-.features-title {
+.features-label {
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -385,8 +385,8 @@ img {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1;
-  letter-spacing: 14;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   color: #ffffff;
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
@@ -690,8 +690,8 @@ img {
   background-color: transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
@@ -753,7 +753,6 @@ img {
 }
 
 .address-mail {
-  margin-top: 0px;
   margin-bottom: 9px;
   color: #ffffff;
 }

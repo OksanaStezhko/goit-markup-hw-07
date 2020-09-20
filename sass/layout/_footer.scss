@@ -21,7 +21,7 @@
     @extend %nomargin;
     margin-bottom: 20px;
 
-    @include typography(700, 14px, 1.14);
+    @include typography-label;
     text-align: start;
     color: $text-on-dark;
     text-transform: uppercase;

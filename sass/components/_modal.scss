@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: $bgd-backdrop;
   opacity: 1;
   overflow: auto;
   z-index: 1;
@@ -36,7 +36,7 @@
     height: 30px;
     border-radius: 50%;
     background-color: $text-on-dark;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $color-border-modal;
     transition: fill $time $time-function, transform $time $time-function;
   }
 
@@ -55,8 +55,7 @@
     width: 528px;
     height: 581px;
     background-color: $text-on-dark;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow-modal;
     border-radius: 4px;
 
     transform: translate(-50%, -50%) scale(1);
